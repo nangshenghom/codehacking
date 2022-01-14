@@ -38,7 +38,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav mx-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -68,6 +68,15 @@
                                 </div>
                             </li>
                         @endguest
+
+                        <li class="nav-item">
+
+                            <a class="nav-link align-self-end" href="{{url('home')}}">All Users</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/users/create">Create User</a>
+                        </li>
                     </ul>
                 </div>
             </div>

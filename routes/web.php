@@ -28,3 +28,6 @@ Route::get('/admin', function (){
 });
 
 Route::resource('admin/users', 'AdminUsersController');
+Route::get('home',[\App\Http\Controllers\AdminUsersController::class, 'index']);
+Route::get('admin/users/create', 'AdminUsersController@create');
+
