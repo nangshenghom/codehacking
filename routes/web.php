@@ -30,4 +30,9 @@ Route::get('/admin', function (){
 Route::resource('admin/users', 'AdminUsersController');
 Route::get('home',[\App\Http\Controllers\AdminUsersController::class, 'index']);
 Route::get('admin/users/create', 'AdminUsersController@create');
+//Route::get('edit',[\App\Http\Controllers\AdminUsersController::class, 'edit']);
+Route::get('admin/users/edit/{id}', 'AdminUsersController@edit');
+
+
+
 
