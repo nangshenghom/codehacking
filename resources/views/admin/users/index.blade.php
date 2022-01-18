@@ -2,6 +2,13 @@
 @section('content')
 
     <div class="container">
+
+        @if(Session::has('deleted_users'))
+
+            <p class="bg-danger">{{session('deleted_user')}}</p>
+
+        @endif
+
         <h1>Users</h1>
 
         <table class="table table-bordered">
@@ -23,7 +30,7 @@
                     <tr>
                         <td>{{$user->id}}</td>
                         <td><img height="50" src="/images/{{$user->photo? $user->photo->file : '/images/user.png'}}" alt=""></td>
-                        <td><a href="/admin/users/edit/{{$user->id}}"> {{$user->name}}</a></td>
+                        <!-- <td><a href="/admin/users/edit/{{$user->id}}"> {{$user->name}}</a></td> -->
                         <td>{{$user->email}}</td>
                         <td>{{$user->role->name}}</td>
                         <td>{{$user->is_active == 1? 'Active' : 'Not Active'}}</td>

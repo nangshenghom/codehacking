@@ -70,12 +70,19 @@
                         @endguest
 
                         <li class="nav-item">
-
                             <a class="nav-link align-self-end" href="{{url('home')}}">All Users</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="/admin/users/create">Create User</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link align-self-end" href="/admin/posts">All Posts</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/posts/create">Create Posts</a>
                         </li>
                     </ul>
                 </div>

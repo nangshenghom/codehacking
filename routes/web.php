@@ -33,6 +33,16 @@ Route::get('admin/users/create', 'AdminUsersController@create');
 //Route::get('edit',[\App\Http\Controllers\AdminUsersController::class, 'edit']);
 Route::get('admin/users/edit/{id}', 'AdminUsersController@edit');
 
+// Route::group(['middleware'=>'admin'], function(){
+
+//     Route::resource('admin/users', 'AdminUsersController');
+
+    
+// });
+
+
+Route::resource('/admin/posts','AdminPostsController');
+
 
 
 

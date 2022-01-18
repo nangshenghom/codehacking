@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UsersEditRequest extends FormRequest
+class PostsCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,24 +25,13 @@ class UsersEditRequest extends FormRequest
     {
         return [
             //
+            'title'=>'required',
+         
+            'photo_id'=>'required',
+            'body'=>'required'
 
-            'name' =>'required',
-            'email' =>'required',
-            'role_id'=>'required',
-            'is_active'=>'required'
+
+
         ];
-    }
-
-    public function isAdmin(){
-
-        if($this->role->name = "administrator"){
-
-            return true;
-
-            
-        }
-
-        return $next($request);
-
     }
 }

@@ -51,6 +51,17 @@
 
                 {!! Form::close() !!}
 
+                {!! Form::model($user, ['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id] ])  !!}
+                    {{csrf_field()}}
+
+                    <div class="form-group">
+                        {!! Form::submit('Delete User', ['class'=>'btn btn-danger mt-3 col-sm-3']) !!}
+                    </div>
+
+                {!! Form::close() !!}
+
+                
+
                 <div class="row">
                     @include('includes.form_error')
                 </div>
